@@ -1,4 +1,4 @@
-# transport-1D-MC
+# particle-transport-1D
 This repository contains code to simulate the one-dimensional transport of particles in an advective and diffusive flow, including particle cooling and radiation.
 It uses [GAMERA](http://libgamera.github.io/GAMERA/docs/main_page.html) for the particle cooling and radiation and [Gammapy](https://docs.gammapy.org/stable/) for some convenience functions (although these are easy to replace if needed).
 
@@ -9,7 +9,7 @@ Otherwise you just need to install Gammapy. We will use Gammapy 1.0.1. You can i
 
 ```
 conda env create -f environment.yml
-conda activate transport-1D-MC
+conda activate particle-transport-1D
 ```
 
 ### 2. Install GAMERA
@@ -68,7 +68,7 @@ python examples/simple_example.py
 ```
 
 ## Reproducing the results of the paper
-The folder `ss433` contains the scripts and files needed to reproduce the Figure 3 from H.E.S.S. Collaboration 2023 XXXXX. This requires the data associated to this paper, which can be downloaded from [here](). For convenience, I've put some of the lighter files in this repository.
+The folder `ss433` contains the scripts and files needed to reproduce the Figure 3 from H.E.S.S. Collaboration 2023 XXXXX. This step requires Gammapy, which can be installed as described above. The plots can be reproduced without installing GAMERA as the output from this step is already in the repository, together with the code needed to reproduce them, which does need GAMERA. Reproducing the results requires the data associated to this paper, which can be downloaded from [here](). For convenience, I've put some of the lighter files in this repository.
 
 ### Figure 1
 This figure shows the zoomed-in signiicance map of the SS 433 region together with the measured spectra and flux points from each jet. It requires Gammapy.

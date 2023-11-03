@@ -1,10 +1,10 @@
-# Conda environment for transport-1D-MC
+# Conda environment for particle-transport-1D
 # This is the same as the Gammapy 1.0.1 environment
 # Install:    conda env create -f environment.yml
-# Activate:   conda activate transport-1D-MC
+# Activate:   conda activate particle-transport-1D
 # Deactivate: conda deactivate
 
-name: transport-1D-MC
+name: particle-transport-1D
 
 channels:
   - conda-forge
