@@ -1,0 +1,18 @@
+components:
+-   name: w1
+    type: SkyModel
+    spectral:
+        type: PowerLawSpectralModel
+        parameters:
+        -   name: index
+            value: 2.3972733587609523
+            error: 0.14651439673411193
+        -   name: amplitude
+            value: 2.831496493530811e-13
+            unit: cm-2 s-1 TeV-1
+            error: 7.00177402684923e-14
+        -   name: reference
+            value: 1.0
+            unit: TeV
+            frozen: true
+covariance: aperture_photometry_western_pwl_covariance.dat

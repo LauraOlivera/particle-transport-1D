@@ -1,0 +1,18 @@
+components:
+-   name: western with syst
+    type: SkyModel
+    spectral:
+        type: PowerLawSpectralModel
+        parameters:
+        -   name: index
+            value: 2.3972733587609523
+            error: 0.17738790390091638
+        -   name: amplitude
+            value: 9.145323690979254e-15
+            unit: cm-2 s-1 TeV-1
+            error: 3.4899095779229127e-15
+        -   name: reference
+            value: 4.186781015187154
+            unit: TeV
+            frozen: true
+covariance: western_model_with_systematics.fits_covariance.dat
