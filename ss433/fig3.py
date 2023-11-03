@@ -93,7 +93,7 @@ for temp in x_reg:
     x_reg_distances.append(ang_sep)
 
 
-# And finlaly, plot
+# And finally, plot
 fig, axes = plt.subplots(3,1,figsize=(12,10))
 fig.subplots_adjust(hspace= 0.3)
 
