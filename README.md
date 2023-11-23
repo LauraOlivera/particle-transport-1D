@@ -2,6 +2,8 @@
 This repository contains code to simulate the one-dimensional transport of particles in an advective and diffusive flow, including particle cooling and radiation.
 It uses [GAMERA](http://libgamera.github.io/GAMERA/docs/main_page.html) for the particle cooling and radiation and [Gammapy](https://docs.gammapy.org/stable/) for some convenience functions (although these are easy to replace if needed).
 
+Additionally, the folder `ss433` contains the scripts and files needed to reproduce the Figure 3 from H.E.S.S. Collaboration 2023 XXXXX.
+
 ## Getting started
 ### 1. Install python environment
 The code uses the Gammapy `MapAxis` class for convenience in several locations. If you don't want to install Gammapy, you can replace it wherever it is used.
@@ -68,34 +70,9 @@ python examples/simple_example.py
 ```
 
 ## Reproducing the results of the paper
-The folder `ss433` contains the scripts and files needed to reproduce the Figure 3 from H.E.S.S. Collaboration 2023 XXXXX. This step requires Gammapy, which can be installed as described above. The plots can be reproduced without installing GAMERA as the output from this step is already in the repository, together with the code needed to reproduce them, which does need GAMERA. Reproducing the results requires the data associated to this paper, which can be downloaded from [here](). For convenience, I've put some of the lighter files in this repository.
+The folder `ss433` contains the scripts and files needed to reproduce the Figure 4 from H.E.S.S. Collaboration 2023 XXXXX. This step requires Gammapy, which can be installed as described above. The plots can be reproduced without installing GAMERA as the output from this step is already in the repository, together with the code needed to reproduce them, which does need GAMERA. Reproducing the results requires the data associated to this paper, which can be downloaded from [here](). For convenience, I've put some of the lighter files in this repository.
 
-### Figure 1
-This figure shows the zoomed-in signiicance map of the SS 433 region together with the measured spectra and flux points from each jet. It requires Gammapy.
-To produce it, run
-
-```
-python ss433/fig1.py
-```
-
-The result should look like
-
-![Figure 1](ss433/plots/fig1.png "Figure 1")
-
-
-### Figure 2
-This figure shows the zoomed-in signiicance map of the SS 433 region in three energy bands. To produce it, run
-
-```
-python ss433/fig2.py
-```
-
-The result should look like
-
-![Figure 2](ss433/plots/fig2.png "Figure 2")
-
-
-### Figure 3
+### Figure 4
 This figure shows the flux profiles along the jet for the same three energy bands together with a model derived used the `transport-1D-MC` code. We will first produce the model (this is the most time-consuming step) for both  by running:
 
 ```
@@ -103,12 +80,12 @@ python ss433/make_model.py
 ```
 For convenience, the result of this step is already in this repository (`ss433/west.pkl` and `ss433/east.pkl`), so you can just skip to the next step and directly produce the figure.
 
-The resulting `AdvectionInstance` will have been saved to a file, which we can read to derive the profile for the relevant energy bands and smooth it with the H.E.S.S. PSF. These steps are done by a function stored in the file `prepare_model.py`. To plot the model together with the data and reproduce figure 3, just run:
+The resulting `AdvectionInstance` will have been saved to a file, which we can read to derive the profile for the relevant energy bands and smooth it with the H.E.S.S. PSF. These steps are done by a function stored in the file `prepare_model.py`. To plot the model together with the data and reproduce figure 4, just run:
 
 ```
-python ss433/fig3.py
+python ss433/fig4.py
 ```
 
 The result should look like
 
-![Figure 3](ss433/plots/fig3.png "Figure 3")
+![Figure 3](ss433/plots/fig4.png "Figure 3")

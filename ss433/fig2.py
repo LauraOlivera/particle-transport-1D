@@ -12,7 +12,7 @@ from astropy.visualization.mpl_normalize import ImageNormalize
 from astropy.visualization import LinearStretch
 import plot_params as pparams
 
-data_path = './ss433/hess_data/'
+data_path = './data/'
 
 # Read H.E.S.S. Map
 hess_map = Map.read(data_path + '/maps/significance_energy_bands_no_J1908.fits.gz')
@@ -43,7 +43,7 @@ width = normalize(0.1).data[0]
 cmap = colormap_hess(transition=transition, width=width)
 
 # x-ray contours
-xr = np.genfromtxt(data_path + 'ss433_rosat_brinkmann_xray_fixed.csv', delimiter=',')
+xr = np.genfromtxt(data_path + 'misc/ss433_rosat_brinkmann_xray_fixed.csv', delimiter=',')
 xx = np.asarray([i[0] for i in xr])
 xy = np.asarray([i[1] for i in xr])
 c = SkyCoord(ra=xx*u.degree, dec=xy*u.degree,frame='icrs')
@@ -149,8 +149,8 @@ ax3.text(30,38, s= "PSF", color=color_c, weight='bold',
 for axtemp in [ax1,ax2, ax3]:
     axtemp.scatter(ra_contour_zoom, dec_contour_zoom, color='aqua', s=0.8, alpha=0.3)
 
-    axtemp.coords[0].set_ticks(spacing=1 *u.degree, color = 'white')
-    axtemp.coords[1].set_ticks(spacing=1 *u.degree, color = 'white')
+    axtemp.coords[0].set_ticks(spacing=0.5 *u.degree, color = 'white')
+    axtemp.coords[1].set_ticks(spacing=0.5 *u.degree, color = 'white')
 
     axtemp.coords[0].display_minor_ticks(True)
     axtemp.coords[1].display_minor_ticks(True)

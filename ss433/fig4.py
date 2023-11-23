@@ -9,7 +9,7 @@ from gammapy.estimators import FluxPoints
 import plot_params as pparams
 import scipy
 from spatial_model import AdvectionInstance
-from prepare_model import prepare_model
+from ss433.prepare_model import prepare_model
 
 
 east = AdvectionInstance.read('ss433/east.pkl')
@@ -48,7 +48,7 @@ for idx, i in enumerate(models_best):
     models_best[idx] = f0(final_x_m)*models_best.unit
 
 # read the systematics band
-systematics = np.loadtxt('ss433/fig3_systematics.txt', delimiter=',')
+systematics = np.loadtxt('ss433/fig4_systematics.txt', delimiter=',')
 
 x_syst = systematics[:,0]*u.deg
 low_energy_1 = systematics[:,1]
@@ -146,7 +146,7 @@ fig.text(0.34,0.15, "w1", weight='bold', rotation=90, color='gray')
 fig.text(0.705,0.15, "e1", weight='bold', rotation=90, color='gray')
 fig.text(0.795,0.15, "e2", weight='bold', rotation=90, color='gray')
 
-plt.savefig('ss433/plots/fig3.pdf', transparent = True, bbox_inches = 'tight', pad_inches = 0.1)
-plt.savefig('ss433/plots/fig3.png', transparent = False, bbox_inches = 'tight', pad_inches = 0.1)
+plt.savefig('ss433/plots/fig4.pdf', transparent = True, bbox_inches = 'tight', pad_inches = 0.1)
+plt.savefig('ss433/plots/fig4.png', transparent = False, bbox_inches = 'tight', pad_inches = 0.1)
 
 plt.show()
