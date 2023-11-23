@@ -88,4 +88,4 @@ python ss433/fig4.py
 
 The result should look like
 
-![Figure 3](ss433/plots/fig4.png "Figure 3")
+![Figure 4](ss433/plots/fig4.png "Figure 4")
