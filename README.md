@@ -2,7 +2,7 @@
 This repository contains code to simulate the one-dimensional transport of particles in an advective and diffusive flow, including particle cooling and radiation.
 It uses [GAMERA](http://libgamera.github.io/GAMERA/docs/main_page.html) for the particle cooling and radiation and [Gammapy](https://docs.gammapy.org/stable/) for some convenience functions (although these are easy to replace if needed).
 
-Additionally, the folder `ss433` contains the scripts and files needed to reproduce the Figure 3 from https://www.science.org/doi/10.1126/science.adi2048.
+Additionally, the folder `ss433` contains the scripts and files needed to reproduce the Figure 4 from https://www.science.org/doi/10.1126/science.adi2048.
 
 ## Getting started
 ### 1. Install python environment
