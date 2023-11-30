@@ -2,7 +2,7 @@
 This repository contains code to simulate the one-dimensional transport of particles in an advective and diffusive flow, including particle cooling and radiation.
 It uses [GAMERA](http://libgamera.github.io/GAMERA/docs/main_page.html) for the particle cooling and radiation and [Gammapy](https://docs.gammapy.org/stable/) for some convenience functions (although these are easy to replace if needed).
 
-Additionally, the folder `ss433` contains the scripts and files needed to reproduce the Figure 3 from H.E.S.S. Collaboration 2023 XXXXX.
+Additionally, the folder `ss433` contains the scripts and files needed to reproduce the Figure 3 from https://www.science.org/doi/10.1126/science.adi2048.
 
 ## Getting started
 ### 1. Install python environment
@@ -70,7 +70,7 @@ python examples/simple_example.py
 ```
 
 ## Reproducing the results of the paper
-The folder `ss433` contains the scripts and files needed to reproduce the Figure 4 from H.E.S.S. Collaboration 2023 XXXXX. This step requires Gammapy, which can be installed as described above. The plots can be reproduced without installing GAMERA as the output from this step is already in the repository, together with the code needed to reproduce them, which does need GAMERA. Reproducing the results requires the data associated to this paper, which can be downloaded from [here](). For convenience, I've put some of the lighter files in this repository.
+The folder `ss433` contains the scripts and files needed to reproduce the Figure 4 from https://www.science.org/doi/10.1126/science.adi2048. This step requires Gammapy, which can be installed as described above. The plots can be reproduced without installing GAMERA as the output from this step is already in the repository, together with the code needed to reproduce them, which does need GAMERA. Reproducing the results requires the data associated to this paper, which can be downloaded from [here](). For convenience, I've put some of the lighter files in this repository.
 
 ### Figure 4
 This figure shows the flux profiles along the jet for the same three energy bands together with a model derived used the `transport-1D-MC` code. We will first produce the model (this is the most time-consuming step) for both  by running:
